@@ -22,14 +22,18 @@ class packet;
         sum = sum + (rem**3);
         b = b/10;
       end
-  $display("sum = %0d",sum);
+    $display("sum = %0d",sum);
     
-    if(sum == temp)
-      $display("It is Armstrong Number %0d",temp);
-    else
-      $display("Not a Armstrong Number %0d",temp);
-   
+    return sum;
   endfunction
+
+  function void post_randomize();
+    if(a == num)
+      $display("It is Armstrong Number %0d",num);
+    else
+      $display("Not a Armstrong Number %0d",num);
+  endfunction
+  
 endclass
 
 module test();
